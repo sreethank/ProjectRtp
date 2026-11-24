@@ -650,17 +650,6 @@ public class RegistrationTest {
 }
 ```
 
-**Test Cases:**
-| Test Case | Input / Action | Expected Result |
-| :--- | :--- | :--- |
-| **TC01** | Open application | Registration form displayed |
-| **TC02** | Enter Name | Sreethan |
-| **TC03** | Enter Email | test@gmail.com |
-| **TC04** | Enter Phone | 9876543210 |
-| **TC05** | Select Gender | Male |
-| **TC06** | Select Event | Hackathon |
-| **TC07** | Click Register | Registration Successful! |
-
 **Execution Commands:**
 ```cmd
 docker build -t registrationapp .
