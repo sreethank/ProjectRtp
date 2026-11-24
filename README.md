@@ -235,6 +235,77 @@ git merge chapter2
 
 ---
 
+### Practice Source Code Management (SCM) on GitHub.
+**Folder:** `DevOpsLab`  
+**Filename:** `registration.html`  
+
+**File: registration.html**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+</head>
+<body>
+    <h2>Event Registration Form</h2>
+
+    <form id="regForm">
+        Name: <input type="text" id="name" required><br><br>
+
+        Email: <input type="email" id="email" required><br><br>
+
+        Phone: <input type="text" id="phone" required><br><br>
+
+        Gender:
+        <select id="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select><br><br>
+
+        Event:
+        <select id="event" required>
+            <option value="">Select</option>
+            <option>Hackathon</option>
+            <option>Workshop</option>
+        </select><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("regForm").onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById("message").innerText =
+                "Registration Successful!";
+        };
+    </script>
+</body>
+</html>
+```
+
+**Commands:**
+```bash
+git init
+git branch -M main
+git add registration.html
+git commit -m "Added registration form"
+git remote add origin https://github.com/USERNAME/DevOpsLab.git
+git push -u origin main
+
+git switch -c update
+git add registration.html
+git commit -m "Updated registration form"
+git switch main
+git merge update
+git push origin main
+```
+
+---
+
 ## 4. Docker
 
 ### Create a simple containerized application using Docker.
